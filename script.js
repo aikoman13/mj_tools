@@ -18,7 +18,7 @@ function copyValue(button) {
     selectedButtons.push(buttonValue);
     button.classList.add("selected"); // add the "selected" class
   }
-  // Update the input field based on the selected buttons
+  // Update the input field based on the selected buttons and prompt value
   var inputValue = prefix;
   if (selectedButtons.length > 0) {
     inputValue += separator + selectedButtons.join(separator);
@@ -26,3 +26,20 @@ function copyValue(button) {
   inputValue += suffix;
   inputField.value = inputValue;
 }
+
+// Add event listener to myPrompt textarea
+document.getElementById("myPrompt").addEventListener("input", function() {
+  // Update myInput input field with the prompt value
+  var inputField = document.getElementById('myInput');
+  var promptValue = document.getElementById('myPrompt').value;
+  var prefix = "/imagine prompt: " + promptValue;
+  var suffix = ": --v 4";
+  var separator = ", ";
+  // Update the input field based on the selected buttons and prompt value
+  var inputValue = prefix;
+  if (selectedButtons.length > 0) {
+    inputValue += separator + selectedButtons.join(separator);
+  }
+  inputValue += suffix;
+  inputField.value = inputValue;
+});
