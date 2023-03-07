@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input Field Example</title>
+    <style>
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="myPrompt">Enter text:</label>
+    <input type="text" id="myPrompt" oninput="updateInput()">
+    <br>
+    <label for="myInput">Result:</label>
+    <input type="text" id="myInput" readonly>
+    <br>
+    <button onclick="copyValue(this)">Button 1</button>
+    <button onclick="copyValue(this)">Button 2</button>
+    <button onclick="copyValue(this)">Button 3</button>
+    <button onclick="copyValue(this)">Button 4</button>
+    <button onclick="copyValue(this)">Button 5</button>
+    <button onclick="copyValue(this)">Button 6</button>
+    <button onclick="copyValue(this)">Button 7</button>
+    <button onclick="copyValue(this)">Button 8</button>
+    <button onclick="copyValue(this)">Button 9</button>
+    <button onclick="copyValue(this)">Button 10</button>
+    <button onclick="copyValue(this)">Button 11</button>
+    <button onclick="copyValue(this)">Button 12</button>
+    <button onclick="copyValue(this)">Button 13</button>
+    <button onclick="copyValue(this)">Button 14</button>
+    <button onclick="copyValue(this)">Button 15</button>
+    <button onclick="copyValue(this)">Button 16</button>
+    <script>
+      var selectedButtons = [];
+      function copyValue(button) {
+        var buttonValue = button.innerHTML;
+        var inputField = document.getElementById('myInput');
+        var promptValue = document.getElementById('myPrompt').value;
+        var prefix = "/imagine prompt: " + promptValue;
+        var suffix = ": --v 4";
+        var separator = ", ";
+        if (selectedButtons.includes(buttonValue)) {
+          // Remove the button value from the selectedButtons array
+          selectedButtons = selectedButtons.filter(function(value, index, arr) {
+            return value != buttonValue;
+          });
+        } else {
+          // Add the button value to the selectedButtons array
+          selectedButtons.push(buttonValue);
+        }
+        // Update the input field based on the selected buttons
+        var inputValue = prefix;
+        if (selectedButtons.length > 0) {
+          inputValue += separator + selectedButtons.join(separator);
+        }
+        inputValue += suffix;
+        inputField.value = inputValue;
+      }
+      function updateInput() {
+        var promptValue = document.getElementById('myPrompt').value;
+        var inputValue = "/imagine prompt: " + promptValue + ": --v 4";
+        document.getElementById('myInput').value = inputValue;
+      }
+    </script>
+  </body>
+</html>
