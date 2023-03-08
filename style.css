@@ -64,8 +64,9 @@ label {
 .panel {
   padding: 0 18px;
   display: none;
-  background-color: white;
+  background-color: rgb(235, 228, 228);
   overflow: hidden;
+  border-radius: 10px;
 }
 .s_button {
   background: linear-gradient(to bottom, #ff0000, #3a0202);
