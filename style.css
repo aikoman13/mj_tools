@@ -53,12 +53,12 @@ label {
   }
   
   .accordion.active {
-    background-image: linear-gradient(to bottom, #444, #222);
+    background-image: linear-gradient(to bottom, #443C68, #18122B);
     color: #fff;
   }
   
   .accordion.active:hover {
-    background-image: linear-gradient(to bottom, #222, #000);
+    background-image: linear-gradient(to bottom, #564c83, #292049);
   }
   
 
@@ -95,7 +95,7 @@ label {
 .crumbs {
   font-size: 18px;
   margin-bottom: 20px;
-  background-color: #3510b9;
+  background-color: #18122B;
 }
 
 .breadcrumb {
