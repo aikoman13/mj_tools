@@ -23,14 +23,9 @@ label {
     box-sizing: border-box;
     margin-bottom: 10px;
   }
-  #wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #wrapper > * {
-    width: 75%;
+  #wrapper  {
+    width: 80%; /* set the width of the div */
+    margin: 0 auto; /* set the left and right margins to "auto" */
   }
   .accordion {
     display: inline-block;
@@ -65,12 +60,12 @@ label {
 .panel {
   padding: 0 18px;
   display: none;
-  background-color: rgb(235, 228, 228);
+  background-color: rgb(237, 231, 245);
   overflow: hidden;
   border-radius: 10px;
 }
 .s_button {
-  background: linear-gradient(to bottom, #ff0000, #3a0202);
+  background: linear-gradient(to bottom, #c7c7c7, #5c5c5c);
   border: none;
   border-radius: 5px;
   color: white;
@@ -82,15 +77,15 @@ label {
 }
 
 .s_button.selected {
-  background: #ccc; /* change the background color of selected buttons */
+  background: #393053; /* change the background color of selected buttons */
 }
 
 .s_button:hover {
-  background: #01ff22;
+  background: #635985;
 }
 
 .s_button:active {
-  background: #1003ca;
+  background: #393053;
 }
 .crumbs {
   font-size: 18px;
@@ -118,6 +113,49 @@ label {
   color: #495057;
   font-weight: 600;
 }
-
-
-
+button.clearButton {
+  background: linear-gradient(to bottom, #ff0000, #3a0202);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  margin-right: 10px; /* add some spacing between buttons */
+  width: 120px; /* set the width of the button to 120px */
+}
+#wrapperStyles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#wrapperStyles > *{
+  width: 100%;
+}
+.copyInput {
+  background: linear-gradient(to bottom, #443C68, #393053);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  margin-right: 10px; /* add some spacing between buttons */
+  width: 120px; /* set the width of the button to 120px */
+}
+#message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #443C68;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: none;
+}

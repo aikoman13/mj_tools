@@ -17,7 +17,6 @@
         <li class="breadcrumb-item"><a href="#">Home</a></li>
       </ol>
     </nav>
-    
     <div id="wrapper">
       <label for="myPrompt">Enter Desire Prompt:</label>
       <textarea id="myPrompt" oninput="updateInput()"></textarea>
@@ -25,7 +24,11 @@
       <label for="myInput">Result:</label>
       <textarea id="myInput" readonly></textarea>
       <br>
-      <h1>Welcome to My Website</h1>
+      <button class="copyInput" onclick="copyToClipboard()">Copy All</button>
+      <button class="clearButton" onclick="clearTextarea()">Clear All</button>
+      <div id="message">&#9989; Text copied to clipboard!</div>
+      <div id="wrapperStyles">
+        <h1>Welcome to My Website</h1>
           <button class="accordion"><i class="fa-solid fa-vest-patches"></i> Styles</button>
           <div class="panel">
           <p>
@@ -76,7 +79,8 @@
           <button class="accordion">Seed</button>
           <div class="panel">
           <p><button class="s_button" onclick="copyValue(this)">Button 21</button></p>
-          </div>  
+          </div>
+      </div>    
     </div>
     <script src="script.js"></script>
     <script src="index.js"></script>

@@ -43,3 +43,18 @@ document.getElementById("myPrompt").addEventListener("input", function() {
   inputValue += suffix;
   inputField.value = inputValue;
 });
+function clearTextarea() {
+  document.getElementById("myInput").value = "";
+  document.getElementById("myPrompt").value = "";
+}
+function copyToClipboard() {
+  var textarea = document.getElementById("myInput");
+  textarea.select();
+  document.execCommand("copy");
+
+  var message = document.getElementById("message");
+      message.style.display = "block";
+      setTimeout(function() {
+        message.style.display = "none";
+      }, 2000);
+}
