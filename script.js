@@ -6,7 +6,7 @@ function copyValue(button) {
   var inputField = document.getElementById('myInput');
   var promptValue = document.getElementById('myPrompt').value;
   var prefix = "/imagine prompt: " + promptValue;
-  var midCode = "";
+  var midCode = " ";
   var backCode = " ";
   var suffix = " --v 4";
   var separator = ", ";
