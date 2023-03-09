@@ -5,7 +5,7 @@ function copyValue(button) {
   var inputField = document.getElementById('myInput');
   var promptValue = document.getElementById('myPrompt').value;
   var prefix = "/imagine prompt: " + promptValue;
-  var suffix = ": --v 4";
+  var suffix = " --v 4";
   var separator = ", ";
   if (selectedButtons.includes(buttonValue)) {
     // Remove the button value from the selectedButtons array
@@ -33,7 +33,7 @@ document.getElementById("myPrompt").addEventListener("input", function() {
   var inputField = document.getElementById('myInput');
   var promptValue = document.getElementById('myPrompt').value;
   var prefix = "/imagine prompt: " + promptValue;
-  var suffix = ": --v 4";
+  var suffix = " --v 4";
   var separator = ", ";
   // Update the input field based on the selected buttons and prompt value
   var inputValue = prefix;
@@ -59,4 +59,3 @@ function copyToClipboard() {
         message.style.display = "none";
       }, 2000);
 }
-updateInput()
