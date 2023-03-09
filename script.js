@@ -43,6 +43,7 @@ document.getElementById("myPrompt").addEventListener("input", function() {
   inputValue += suffix;
   inputField.value = inputValue;
 });
+
 function clearTextarea() {
   document.getElementById("myInput").value = "";
   document.getElementById("myPrompt").value = "";
@@ -58,3 +59,4 @@ function copyToClipboard() {
         message.style.display = "none";
       }, 2000);
 }
+updateInput()
