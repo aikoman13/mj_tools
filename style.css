@@ -159,3 +159,12 @@ button.clearButton {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   display: none;
 }
+.container {
+  display: flex;
+}
+
+.column {
+  width: 33.33%;
+  padding: 10px;
+  border: 1px solid black;
+}
